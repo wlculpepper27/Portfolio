@@ -1,0 +1,43 @@
+{
+  "_comment": "Documentation only — ignored by the app. Copy _schemaExample to add a new project; omit any optional keys you do not need.",
+
+  "_schemaExample": {
+    "id": "unique-slug-for-react-keys",
+    "title": "PROJECT TITLE",
+    "thumbnail": "https://example.com/image.jpg",
+    "description": "One or two sentences about what the project does.",
+    "technologies": ["TYPESCRIPT", "REACT", "NODE.JS"],
+    "github": "https://github.com/your-org/your-repo",
+    "demo_link": "https://your-demo.example.com or https://youtube.com/...",
+    "badge": "LIVE / 2024"
+  },
+
+  "projects": [
+    {
+      "id": "quantum-engine",
+      "title": "QUANTUM ENGINE",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDi3iiydNjr0ys_GI1IyCDnoGUa8hnpk2FqqvcfQ1zGy-5EzuQ-9EdiHgoznsmPoSi6AzaOI4NVOKWvKCH6yP8wqV7vpcJpzlRBhrW2jg723378l5GndR0pZB2IWaWfRThVffo9W1B-eDpnL5z6tWozXqE8YKvLaENXFrvB6hHpX4HBs6XqT4MAtjDTwrSIOW9CkWgvEf5ELBZYmxFiRNE1orxTZ7Vt5yzSnM0EBAWw-yiEbG-YWs0NbVaVKnzbowwNjP2mP9NU40Sr",
+      "description": "High-frequency data processing engine built with Rust and React. Optimized for sub-ms latency in complex calculation environments.",
+      "technologies": ["RUST", "WASM", "REDIS"],
+      "github": "https://github.com",
+      "demo_link": "https://example.com",
+      "badge": "LIVE / 2024"
+    },
+    {
+      "id": "nexus-mesh",
+      "title": "NEXUS MESH",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZ3cd3YbmFc6xO8YSi_5m31T02HDJLBCMh9zgkTN5_295OI8K8iPJxWISsYNs_YVmU_4pvlkA7UB543QJw-lGozvH_BGVoz9DZud0-vT-3b9VcDZ2-HU94Dkvf-8JZNahVfIwQBOjPVSm8uhyQtuNvbRF1kesT7o7-0_5LsWPnpcPzpeAC6YId2t1f7y6A3X570Tu-xC2eWLg3kCD7BWE5SLizNnE8egvbYnWfL1uRQvkfsttVfaR329yRn1r5lUwudTYhgb6BUQGf",
+      "description": "Decentralized asset management platform leveraging distributed ledger technology for secure institutional data transfer.",
+      "technologies": ["NODE.JS", "DOCKER", "AWS"],
+      "github": "https://github.com",
+      "demo_link": "https://example.com",
+      "badge": "BETA / 2023"
+    },
+    {
+      "id": "example-minimal",
+      "title": "MINIMAL PROJECT",
+      "description": "This card omits optional fields to show the UI still works: no thumbnail, no links, no badge.",
+      "technologies": ["HTML", "CSS"]
+    }
+  ]
+}

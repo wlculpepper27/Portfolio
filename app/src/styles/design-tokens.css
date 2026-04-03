@@ -1,0 +1,172 @@
+/**
+ * Mockup1 / “Digital Architect” design system.
+ * - :root --app-color-* are the source of truth (use in custom CSS: var(--app-color-primary), etc.).
+ * - @theme maps them to Tailwind utilities (bg-primary, text-on-surface-variant, …).
+ */
+
+:root {
+  --app-color-on-tertiary-container: #ffffff;
+  --app-color-on-error: #ffffff;
+  --app-color-primary-fixed-dim: #474747;
+  --app-color-on-tertiary-fixed-variant: #e2e2e2;
+  --app-color-surface-container-lowest: #ffffff;
+  --app-color-secondary-container: #ced4e4;
+  --app-color-outline: #777777;
+  --app-color-surface-tint: #5e5e5e;
+  --app-color-surface-container-highest: #e2e2e2;
+  --app-color-on-primary-container: #ffffff;
+  --app-color-surface-container: #eeeeee;
+  --app-color-on-secondary-container: #151c27;
+  --app-color-background: #f9f9f9;
+  --app-color-secondary-fixed: #c0c7d6;
+  --app-color-on-error-container: #410002;
+  --app-color-on-primary: #e2e2e2;
+  --app-color-primary: #000000;
+  --app-color-secondary: #585f6c;
+  --app-color-tertiary-container: #747474;
+  --app-color-on-background: #1a1c1c;
+  --app-color-on-secondary-fixed-variant: #353c48;
+  --app-color-surface-container-low: #f3f3f4;
+  --app-color-inverse-primary: #c6c6c6;
+  --app-color-tertiary-fixed-dim: #474747;
+  --app-color-surface-variant: #e2e2e2;
+  --app-color-on-primary-fixed-variant: #e2e2e2;
+  --app-color-surface-dim: #dadada;
+  --app-color-on-secondary: #ffffff;
+  --app-color-tertiary-fixed: #5e5e5e;
+  --app-color-on-surface-variant: #474747;
+  --app-color-tertiary: #3b3b3b;
+  --app-color-primary-fixed: #5e5e5e;
+  --app-color-on-surface: #1a1c1c;
+  --app-color-on-tertiary: #e2e2e2;
+  --app-color-inverse-on-surface: #f0f1f1;
+  --app-color-primary-container: #3b3b3b;
+  --app-color-error: #ba1a1a;
+  --app-color-outline-variant: #c6c6c6;
+  --app-color-on-secondary-fixed: #151c27;
+  --app-color-on-tertiary-fixed: #ffffff;
+  --app-color-secondary-fixed-dim: #a4abbb;
+  --app-color-surface: #f9f9f9;
+  --app-color-on-primary-fixed: #ffffff;
+  --app-color-surface-bright: #f9f9f9;
+  --app-color-surface-container-high: #e8e8e8;
+  --app-color-inverse-surface: #2f3131;
+  --app-color-error-container: #ffdad6;
+
+  /* Aliases matching Tailwind token names (optional shorthand in custom CSS) */
+  --color-on-tertiary-container: var(--app-color-on-tertiary-container);
+  --color-on-error: var(--app-color-on-error);
+  --color-primary-fixed-dim: var(--app-color-primary-fixed-dim);
+  --color-on-tertiary-fixed-variant: var(--app-color-on-tertiary-fixed-variant);
+  --color-surface-container-lowest: var(--app-color-surface-container-lowest);
+  --color-secondary-container: var(--app-color-secondary-container);
+  --color-outline: var(--app-color-outline);
+  --color-surface-tint: var(--app-color-surface-tint);
+  --color-surface-container-highest: var(--app-color-surface-container-highest);
+  --color-on-primary-container: var(--app-color-on-primary-container);
+  --color-surface-container: var(--app-color-surface-container);
+  --color-on-secondary-container: var(--app-color-on-secondary-container);
+  --color-background: var(--app-color-background);
+  --color-secondary-fixed: var(--app-color-secondary-fixed);
+  --color-on-error-container: var(--app-color-on-error-container);
+  --color-on-primary: var(--app-color-on-primary);
+  --color-primary: var(--app-color-primary);
+  --color-secondary: var(--app-color-secondary);
+  --color-tertiary-container: var(--app-color-tertiary-container);
+  --color-on-background: var(--app-color-on-background);
+  --color-on-secondary-fixed-variant: var(--app-color-on-secondary-fixed-variant);
+  --color-surface-container-low: var(--app-color-surface-container-low);
+  --color-inverse-primary: var(--app-color-inverse-primary);
+  --color-tertiary-fixed-dim: var(--app-color-tertiary-fixed-dim);
+  --color-surface-variant: var(--app-color-surface-variant);
+  --color-on-primary-fixed-variant: var(--app-color-on-primary-fixed-variant);
+  --color-surface-dim: var(--app-color-surface-dim);
+  --color-on-secondary: var(--app-color-on-secondary);
+  --color-tertiary-fixed: var(--app-color-tertiary-fixed);
+  --color-on-surface-variant: var(--app-color-on-surface-variant);
+  --color-tertiary: var(--app-color-tertiary);
+  --color-primary-fixed: var(--app-color-primary-fixed);
+  --color-on-surface: var(--app-color-on-surface);
+  --color-on-tertiary: var(--app-color-on-tertiary);
+  --color-inverse-on-surface: var(--app-color-inverse-on-surface);
+  --color-primary-container: var(--app-color-primary-container);
+  --color-error: var(--app-color-error);
+  --color-outline-variant: var(--app-color-outline-variant);
+  --color-on-secondary-fixed: var(--app-color-on-secondary-fixed);
+  --color-on-tertiary-fixed: var(--app-color-on-tertiary-fixed);
+  --color-secondary-fixed-dim: var(--app-color-secondary-fixed-dim);
+  --color-surface: var(--app-color-surface);
+  --color-on-primary-fixed: var(--app-color-on-primary-fixed);
+  --color-surface-bright: var(--app-color-surface-bright);
+  --color-surface-container-high: var(--app-color-surface-container-high);
+  --color-inverse-surface: var(--app-color-inverse-surface);
+  --color-error-container: var(--app-color-error-container);
+
+  --font-stack-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-stack-label: 'Space Grotesk', ui-sans-serif, sans-serif;
+  --font-stack-headline: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-on-tertiary-container: var(--color-on-tertiary-container);
+  --color-on-error: var(--color-on-error);
+  --color-primary-fixed-dim: var(--color-primary-fixed-dim);
+  --color-on-tertiary-fixed-variant: var(--color-on-tertiary-fixed-variant);
+  --color-surface-container-lowest: var(--color-surface-container-lowest);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-outline: var(--color-outline);
+  --color-surface-tint: var(--color-surface-tint);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-on-primary-container: var(--color-on-primary-container);
+  --color-surface-container: var(--color-surface-container);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+  --color-background: var(--color-background);
+  --color-secondary-fixed: var(--color-secondary-fixed);
+  --color-on-error-container: var(--color-on-error-container);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-tertiary-container: var(--color-tertiary-container);
+  --color-on-background: var(--color-on-background);
+  --color-on-secondary-fixed-variant: var(--color-on-secondary-fixed-variant);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-inverse-primary: var(--color-inverse-primary);
+  --color-tertiary-fixed-dim: var(--color-tertiary-fixed-dim);
+  --color-surface-variant: var(--color-surface-variant);
+  --color-on-primary-fixed-variant: var(--color-on-primary-fixed-variant);
+  --color-surface-dim: var(--color-surface-dim);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-tertiary-fixed: var(--color-tertiary-fixed);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-tertiary: var(--color-tertiary);
+  --color-primary-fixed: var(--color-primary-fixed);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-tertiary: var(--color-on-tertiary);
+  --color-inverse-on-surface: var(--color-inverse-on-surface);
+  --color-primary-container: var(--color-primary-container);
+  --color-error: var(--color-error);
+  --color-outline-variant: var(--color-outline-variant);
+  --color-on-secondary-fixed: var(--color-on-secondary-fixed);
+  --color-on-tertiary-fixed: var(--color-on-tertiary-fixed);
+  --color-secondary-fixed-dim: var(--color-secondary-fixed-dim);
+  --color-surface: var(--color-surface);
+  --color-on-primary-fixed: var(--color-on-primary-fixed);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-inverse-surface: var(--color-inverse-surface);
+  --color-error-container: var(--color-error-container);
+
+  --font-body: var(--font-stack-body);
+  --font-label: var(--font-stack-label);
+  --font-headline: var(--font-stack-headline);
+
+  --radius: 0px;
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+}

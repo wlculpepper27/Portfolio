@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html className="light" lang="en">
+  <!-- head start -->
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>THE DIGITAL ARCHITECT | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Space_Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <!-- tailwind config start -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-tertiary-container": "#ffffff",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#474747",
+              "on-tertiary-fixed-variant": "#e2e2e2",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#ced4e4",
+              "outline": "#777777",
+              "surface-tint": "#5e5e5e",
+              "surface-container-highest": "#e2e2e2",
+              "on-primary-container": "#ffffff",
+              "surface-container": "#eeeeee",
+              "on-secondary-container": "#151c27",
+              "background": "#f9f9f9",
+              "secondary-fixed": "#c0c7d6",
+              "on-error-container": "#410002",
+              "on-primary": "#e2e2e2",
+              "primary": "#000000",
+              "secondary": "#585f6c",
+              "tertiary-container": "#747474",
+              "on-background": "#1a1c1c",
+              "on-secondary-fixed-variant": "#353c48",
+              "surface-container-low": "#f3f3f4",
+              "inverse-primary": "#c6c6c6",
+              "tertiary-fixed-dim": "#474747",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-dim": "#dadada",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#5e5e5e",
+              "on-surface-variant": "#474747",
+              "tertiary": "#3b3b3b",
+              "primary-fixed": "#5e5e5e",
+              "on-surface": "#1a1c1c",
+              "on-tertiary": "#e2e2e2",
+              "inverse-on-surface": "#f0f1f1",
+              "primary-container": "#3b3b3b",
+              "error": "#ba1a1a",
+              "outline-variant": "#c6c6c6",
+              "on-secondary-fixed": "#151c27",
+              "on-tertiary-fixed": "#ffffff",
+              "secondary-fixed-dim": "#a4abbb",
+              "surface": "#f9f9f9",
+              "on-primary-fixed": "#ffffff",
+              "surface-bright": "#f9f9f9",
+              "surface-container-high": "#e8e8e8",
+              "inverse-surface": "#2f3131",
+              "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+              "DEFAULT": "0px",
+              "lg": "0px",
+              "xl": "0px",
+              "full": "0px"
+            },
+            "fontFamily": {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+    <!-- tailwind config end -->
+    <!-- custom styles start -->
+    <style>
+      * { border-radius: 0 !important; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      body { background-color: #FFFFFF; color: #000000; -webkit-font-smoothing: antialiased; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+    <!-- custom styles end -->
+  </head>
+  <!-- head end -->
+
+  <body className="font-body">
+    <!-- navbar start -->
+    <nav className="bg-white dark:bg-black w-full border-b-0 rounded-none flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+      <!-- navbar: brand start -->
+      <div className="text-2xl font-black tracking-tighter text-black dark:text-white">THE DIGITAL ARCHITECT</div>
+      <!-- navbar: brand end -->
+      <!-- navbar: desktop links start -->
+      <div className="hidden md:flex gap-8 items-center">
+        <a className="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 font-['Inter'] font-bold tracking-tight uppercase" href="#bio">BIO</a>
+        <a className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-['Inter'] font-bold tracking-tight uppercase" href="#projects">PROJECTS</a>
+        <a className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-['Inter'] font-bold tracking-tight uppercase" href="#skills">SKILLS</a>
+        <a className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-['Inter'] font-bold tracking-tight uppercase" href="#resume">RESUME</a>
+        <button className="bg-black text-white px-6 py-2 font-bold hover:bg-gray-800 transition-all active:scale-95 uppercase tracking-tight" type="button">CONTACT</button>
+      </div>
+      <!-- navbar: desktop links end -->
+      <!-- navbar: mobile menu button start -->
+      <button className="md:hidden" type="button" aria-label="Open menu">
+        <span className="material-symbols-outlined" data-icon="menu">menu</span>
+      </button>
+      <!-- navbar: mobile menu button end -->
+    </nav>
+    <!-- navbar end -->
+
+    <!-- main start -->
+    <main>
+      <!-- hero section start -->
+      <section className="px-8 pt-24 pb-32 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+        <!-- hero: copy column start -->
+        <div className="lg:col-span-8">
+          <p className="font-label text-sm tracking-[0.2em] text-on-surface-variant uppercase mb-6">SYSTEM ARCHITECTURE / FULL-STACK ENGINEERING</p>
+          <h1 className="text-7xl md:text-9xl font-black tracking-tighter leading-[0.9] mb-8 uppercase">
+            BUILDING<br />DIGITAL<br />STRUCTURES.
+          </h1>
+          <!-- hero: social links start -->
+          <div className="flex gap-6 mt-12">
+            <a className="font-label text-xs tracking-widest hover:underline uppercase" href="#">LINKEDIN</a>
+            <a className="font-label text-xs tracking-widest hover:underline uppercase" href="#">INSTAGRAM</a>
+            <a className="font-label text-xs tracking-widest hover:underline uppercase" href="#">GITHUB</a>
+          </div>
+          <!-- hero: social links end -->
+        </div>
+        <!-- hero: copy column end -->
+        <!-- hero: portrait column start -->
+        <div className="lg:col-span-4 bg-surface-container-low p-2">
+          <img alt="Professional Portrait" className="w-full aspect-square object-cover grayscale contrast-125" data-alt="Professional portrait of a developer with a neutral expression, wearing a black minimalist t-shirt, high contrast black and white lighting, studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAM_4dePLdeToQWEIXBHjW5Zea6UMJIcYk66Wh2B6wY_Cl81adt9C2ptE0HL70UFWxJ0Qd3WtaBJfpEABFfSGPf3IMkwTkmMf83-vzxUb734HPPtZ4FA0jzngUsmtNyGstKT5wGyYLZZyquly-Njzt80hO-HHcK8_ixJtOE3Qyz5uH9kyC9DoyD1mvVQnZtYqPPZSaI3VmLewThiapacuWh3cxmkg-Sq6r7i97IDsXc4aSffwioj3YRkkk5DYP8RxXfkRPPuZ-Oetu" />
+        </div>
+        <!-- hero: portrait column end -->
+      </section>
+      <!-- hero section end -->
+
+      <!-- bio section start -->
+      <section className="bg-surface-container-low py-32 px-8" id="bio">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- bio: label column start -->
+          <div className="lg:col-span-4">
+            <span className="font-label text-xs tracking-[0.3em] uppercase text-on-surface-variant">01 / LOGIC</span>
+          </div>
+          <!-- bio: label column end -->
+          <!-- bio: content column start -->
+          <div className="lg:col-span-8">
+            <p className="text-3xl md:text-4xl font-medium leading-relaxed text-black max-w-3xl">
+              I specialize in constructing robust, scalable web architectures. My approach treats code as infrastructure—prioritizing mathematical precision, clean abstraction, and long-term maintainability over transient design trends.
+            </p>
+            <!-- bio: aside quote start -->
+            <div className="mt-16 border-l-2 border-black pl-8 max-w-xl">
+              <p className="text-on-surface-variant leading-loose">
+                Currently focused on distributed systems and high-performance frontend interfaces. Based in the intersection of engineering and design.
+              </p>
+            </div>
+            <!-- bio: aside quote end -->
+          </div>
+          <!-- bio: content column end -->
+        </div>
+      </section>
+      <!-- bio section end -->
+
+      <!-- skills section start -->
+      <section className="py-32 px-8 max-w-7xl mx-auto" id="skills">
+        <!-- skills: section header start -->
+        <div className="flex justify-between items-baseline mb-24">
+          <h2 className="text-5xl font-black tracking-tighter uppercase">STACK</h2>
+          <span className="font-label text-xs tracking-widest uppercase text-on-surface-variant">02 / TECHNICAL DATA</span>
+        </div>
+        <!-- skills: section header end -->
+        <!-- skills: tiles row (mobile carousel / desktop wrap) start -->
+        <div className="flex overflow-x-auto md:flex-wrap gap-4 no-scrollbar">
+          <!-- skill tile: typescript start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="terminal">terminal</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">TYPESCRIPT</span>
+          </div>
+          <!-- skill tile: typescript end -->
+          <!-- skill tile: react start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="javascript">javascript</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">REACT</span>
+          </div>
+          <!-- skill tile: react end -->
+          <!-- skill tile: postgres start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="database">database</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">POSTGRES</span>
+          </div>
+          <!-- skill tile: postgres end -->
+          <!-- skill tile: aws infra start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="cloud">cloud</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">AWS INFRA</span>
+          </div>
+          <!-- skill tile: aws infra end -->
+          <!-- skill tile: node.js start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="code">code</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">NODE.JS</span>
+          </div>
+          <!-- skill tile: node.js end -->
+          <!-- skill tile: docker start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="layers">layers</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">DOCKER</span>
+          </div>
+          <!-- skill tile: docker end -->
+          <!-- skill tile: graphql start -->
+          <div className="flex-none w-32 h-32 md:w-40 md:h-40 bg-surface-container-low flex flex-col items-center justify-center group hover:bg-black transition-colors duration-300">
+            <span className="material-symbols-outlined text-4xl mb-2 group-hover:text-white" data-icon="settings_ethernet">settings_ethernet</span>
+            <span className="font-label text-[10px] tracking-widest group-hover:text-white">GRAPHQL</span>
+          </div>
+          <!-- skill tile: graphql end -->
+        </div>
+        <!-- skills: tiles row (mobile carousel / desktop wrap) end -->
+      </section>
+      <!-- skills section end -->
+
+      <!-- projects section start -->
+      <section className="py-32 px-8 bg-black text-white" id="projects">
+        <div className="max-w-7xl mx-auto">
+          <!-- projects: section header start -->
+          <div className="flex justify-between items-baseline mb-24">
+            <h2 className="text-5xl font-black tracking-tighter uppercase">PROJECTS</h2>
+            <span className="font-label text-xs tracking-widest uppercase text-gray-500">03 / IMPLEMENTATIONS</span>
+          </div>
+          <!-- projects: section header end -->
+          <!-- projects: grid start -->
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- project card: quantum engine start -->
+            <div className="flex flex-col group">
+              <!-- project card: media start -->
+              <div className="relative overflow-hidden mb-8 aspect-video bg-gray-900">
+                <img alt="Project One" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80" data-alt="Abstract dashboard interface with complex data visualizations, monochromatic technical UI, ultra-sharp detail, professional dark theme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi3iiydNjr0ys_GI1IyCDnoGUa8hnpk2FqqvcfQ1zGy-5EzuQ-9EdiHgoznsmPoSi6AzaOI4NVOKWvKCH6yP8wqV7vpcJpzlRBhrW2jg723378l5GndR0pZB2IWaWfRThVffo9W1B-eDpnL5z6tWozXqE8YKvLaENXFrvB6hHpX4HBs6XqT4MAtjDTwrSIOW9CkWgvEf5ELBZYmxFiRNE1orxTZ7Vt5yzSnM0EBAWw-yiEbG-YWs0NbVaVKnzbowwNjP2mP9NU40Sr" />
+                <div className="absolute top-4 right-4">
+                  <span className="bg-white text-black font-label text-[10px] px-3 py-1 tracking-widest">LIVE / 2024</span>
+                </div>
+              </div>
+              <!-- project card: media end -->
+              <!-- project card: title row start -->
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-3xl font-bold tracking-tighter uppercase">QUANTUM ENGINE</h3>
+                <div className="flex gap-4">
+                  <a className="hover:text-gray-400 transition-colors" href="#"><span className="material-symbols-outlined" data-icon="link">link</span></a>
+                  <a className="hover:text-gray-400 transition-colors" href="#"><span className="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+              </div>
+              <!-- project card: title row end -->
+              <p className="text-gray-400 mb-8 max-w-md">High-frequency data processing engine built with Rust and React. Optimized for sub-ms latency in complex calculation environments.</p>
+              <!-- project card: tags start -->
+              <div className="flex flex-wrap gap-2">
+                <span className="font-label text-[10px] border border-gray-800 px-3 py-1 uppercase">RUST</span>
+                <span className="font-label text-[10px] border border-gray-800 px-3 py-1 uppercase">WASM</span>
+                <span className="font-label text-[10px] border border-gray-800 px-3 py-1 uppercase">REDIS</span>
+              </div>
+              <!-- project card: tags end -->
+            </div>
+            <!-- project card: quantum engine end -->
+            <!-- project card: nexus mesh start -->
+            <div className="flex flex-col group">
+              <!-- project card: media start -->
+              <div className="relative overflow-hidden mb-8 aspect-video bg-gray-900">
+                <img alt="Project Two" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80" data-alt="Modern architectural blueprint rendered in glowing digital lines on a dark background, minimal technical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ3cd3YbmFc6xO8YSi_5m31T02HDJLBCMh9zgkTN5_295OI8K8iPJxWISsYNs_YVmU_4pvlkA7UB543QJw-lGozvH_BGVoz9DZud0-vT-3b9VcDZ2-HU94Dkvf-8JZNahVfIwQBOjPVSm8uhyQtuNvbRF1kesT7o7-0_5LsWPnpcPzpeAC6YId2t1f7y6A3X570Tu-xC2eWLg3kCD7BWE5SLizNnE8egvbYnWfL1uRQvkfsttVfaR329yRn1r5lUwudTYhgb6BUQGf" />
+                <div className="absolute top-4 right-4">
+                  <span className="bg-white text-black font-label text-[10px] px-3 py-1 tracking-widest">BETA / 2023</span>
+                </div>
+              </div>
+              <!-- project card: media end -->
+              <!-- project card: title row start -->
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-3xl font-bold tracking-tighter uppercase">NEXUS MESH</h3>
+                <div className="flex gap-4">
+                  <a className="hover:text-gray-400 transition-colors" href="#"><span className="material-symbols-outlined" data-icon="link">link</span></a>
+                  <a className="hover:text-gray-400 transition-colors" href="#"><span className="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+                </div>
+              </div>
+              <!-- project card: title row end -->
+              <p className="text-gray-400 mb-8 max-w-md">Decentralized asset management platform leveraging distributed ledger technology for secure institutional data transfer.</p>
+              <!-- project card: tags start -->
+              <div className="flex flex-wrap gap-2">
+                <span className="font-label text-[10px] border border-gray-800 px-3 py-1 uppercase">NODE.JS</span>
+                <span className="font-label text-[10px] border border-gray-800 px-3 py-1 uppercase">DOCKER</span>
+                <span className="font-label text-[10px] border border-gray-800 px-3 py-1 uppercase">AWS</span>
+              </div>
+              <!-- project card: tags end -->
+            </div>
+            <!-- project card: nexus mesh end -->
+          </div>
+          <!-- projects: grid end -->
+          <!-- projects: view all CTA start -->
+          <div className="mt-32 border-t border-gray-800 pt-16 flex justify-center">
+            <button className="border-2 border-white text-white px-12 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all" type="button">VIEW ALL REPOSITORIES</button>
+          </div>
+          <!-- projects: view all CTA end -->
+        </div>
+      </section>
+      <!-- projects section end -->
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer className="bg-gray-100 dark:bg-gray-900 flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full mt-32">
+      <!-- footer: copyright start -->
+      <div className="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-gray-600 dark:text-gray-400 mb-8 md:mb-0">
+        © 2024 THE DIGITAL ARCHITECT. ALL RIGHTS RESERVED.
+      </div>
+      <!-- footer: copyright end -->
+      <!-- footer: social links start -->
+      <div className="flex gap-12">
+        <a className="font-['Space_Grotesk'] text-xs tracking-widest uppercase font-bold text-black dark:text-white hover:underline decoration-1 underline-offset-4 transition-opacity opacity-100 hover:opacity-80" href="#">LINKEDIN</a>
+        <a className="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-gray-600 dark:text-gray-400 hover:underline decoration-1 underline-offset-4 transition-opacity opacity-100 hover:opacity-80" href="#">INSTAGRAM</a>
+        <a className="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-gray-600 dark:text-gray-400 hover:underline decoration-1 underline-offset-4 transition-opacity opacity-100 hover:opacity-80" href="#">GITHUB</a>
+      </div>
+      <!-- footer: social links end -->
+    </footer>
+    <!-- footer end -->
+  </body>
+</html>
