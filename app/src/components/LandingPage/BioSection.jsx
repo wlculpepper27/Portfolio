@@ -8,15 +8,15 @@ import { MainLayoutContainer } from '../../MainLayout.jsx'
 // =============================================================================
 
 /** Small label above the bio (left column on desktop). */
-const bioSectionLabel = '01 / LOGIC'
+const bioSectionLabel = '01 / BIO'
 
 /** Main bio copy — the big paragraph visitors read first. */
 const bioMainParagraph =
-  'I specialize in constructing robust, scalable web architectures. My approach treats code as infrastructure—prioritizing mathematical precision, clean abstraction, and long-term maintainability over transient design trends.'
+  'I specialize in constructing robust, scalable web architectures. My foundation spans Python, Java, C++, SQL, and HTML but my focus is not on tools alone. It is on constructing maintainable, scalable systems that solve real problems. Currently deepening my command of software engineering principles, I am actively seeking internship and scholarship opportunities where I can contribute to impactful, high-integrity projects and continue evolving as an engineer.'
 
 /** Secondary text in the bordered box below the main paragraph. */
 const bioAsideParagraph =
-  'Currently focused on distributed systems and high-performance frontend interfaces. Based in the intersection of engineering and design.'
+  'Distributed systems. High-performance frontends. The intersection of engineering and design. That’s where I build. Grounded in Python, Java, C++, SQL, and HTML.'
 
 // =============================================================================
 // Component — matches mockup1/landing-page.html (bio section)

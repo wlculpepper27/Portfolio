@@ -4,7 +4,7 @@ import { MainLayoutContainer } from '../../MainLayout.jsx'
 // Hero content — change the text, image URL, and links here (no need to hunt
 // through JSX below). Each social entry is one row in the list under the headline.
 // =============================================================================
-const heroEyebrow = 'Computer Science / Software ENGINEERING'
+const heroEyebrow = 'Computer Science / Software ENGINEERING / Cyber Security'
 
 /** Each string becomes one line of the big title (a line break is added between them). */
 const heroHeadlineLines = ['BUILDING', 'DIGITAL', 'STRUCTURES.']
@@ -17,9 +17,9 @@ const heroPortrait = {
 
 /** Small text links under the headline (add/remove objects to change the row). */
 const heroSocialLinks = [
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'GitHub', href: 'https://github.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/weston-culpepper/' },
+  { label: 'GitHub', href: 'https://github.com/wlculpepper27' },
+  { label: 'Instagram', href: 'https://www.instagram.com/wlculpepper27/' },
 ]
 
 // =============================================================================

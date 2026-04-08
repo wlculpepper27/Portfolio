@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 // --- Edit these to change the site name and menu links ---
 const brand = {
-  title: 'MY PORTFOLIO',
+  title: 'Weston Culpepper',
   homePath: '/',
 }
 

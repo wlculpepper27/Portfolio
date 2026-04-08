@@ -5,18 +5,18 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 const socialLinks = [
   {
     name: 'LinkedIn',
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/weston-culpepper/',
     icon: FaLinkedin,
     emphasized: true,
   },
   {
     name: 'Instagram',
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/wlculpepper27/',
     icon: FaInstagram,
   },
   {
     name: 'GitHub',
-    href: 'https://github.com',
+    href: 'https://github.com/wlculpepper27',
     icon: FaGithub,
   },
 ]
