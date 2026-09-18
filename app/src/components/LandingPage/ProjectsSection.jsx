@@ -73,7 +73,7 @@ export default function ProjectsSection() {
 
         <div className="mt-32 flex justify-center border-t border-gray-800 pt-16">
           <a
-            href="https://github.com"
+            href="https://github.com/wlculpepper27"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-white px-12 py-4 font-bold uppercase tracking-widest transition-all hover:bg-white hover:text-black"

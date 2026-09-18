@@ -4,14 +4,14 @@ import { MainLayoutContainer } from '../../MainLayout.jsx'
 // Hero content — change the text, image URL, and links here (no need to hunt
 // through JSX below). Each social entry is one row in the list under the headline.
 // =============================================================================
-const heroEyebrow = 'Computer Science / Software ENGINEERING / Cyber Security'
+const heroEyebrow = 'Computer Science / Software Engineering / Cyber Security'
 
 /** Each string becomes one line of the big title (a line break is added between them). */
 const heroHeadlineLines = ['BUILDING', 'DIGITAL', 'STRUCTURES.']
 
 /** Photo on the right. `alt` is read by screen readers; keep it descriptive. */
 const heroPortrait = {
-  src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDAM_4dePLdeToQWEIXBHjW5Zea6UMJIcYk66Wh2B6wY_Cl81adt9C2ptE0HL70UFWxJ0Qd3WtaBJfpEABFfSGPf3IMkwTkmMf83-vzxUb734HPPtZ4FA0jzngUsmtNyGstKT5wGyYLZZyquly-Njzt80hO-HHcK8_ixJtOE3Qyz5uH9kyC9DoyD1mvVQnZtYqPPZSaI3VmLewThiapacuWh3cxmkg-Sq6r7i97IDsXc4aSffwioj3YRkkk5DYP8RxXfkRPPuZ-Oetu',
+  src: 'headshot.jpg',
   alt: 'Professional portrait',
 }
 

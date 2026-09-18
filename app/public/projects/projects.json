@@ -14,30 +14,22 @@
 
   "projects": [
     {
-      "id": "quantum-engine",
-      "title": "QUANTUM ENGINE",
-      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDi3iiydNjr0ys_GI1IyCDnoGUa8hnpk2FqqvcfQ1zGy-5EzuQ-9EdiHgoznsmPoSi6AzaOI4NVOKWvKCH6yP8wqV7vpcJpzlRBhrW2jg723378l5GndR0pZB2IWaWfRThVffo9W1B-eDpnL5z6tWozXqE8YKvLaENXFrvB6hHpX4HBs6XqT4MAtjDTwrSIOW9CkWgvEf5ELBZYmxFiRNE1orxTZ7Vt5yzSnM0EBAWw-yiEbG-YWs0NbVaVKnzbowwNjP2mP9NU40Sr",
-      "description": "High-frequency data processing engine built with Rust and React. Optimized for sub-ms latency in complex calculation environments.",
-      "technologies": ["RUST", "WASM", "REDIS"],
-      "github": "https://github.com",
-      "demo_link": "https://example.com",
-      "badge": "LIVE / 2024"
-    },
+  "id": "chevconnect",
+  "title": "CHEVCONNECT - JOB MATCH",
+  "description": "Won 1st place among 15+ competing teams by building the backend for an AI-powered job-matching platform in a 24-hour hackathon, achieving 95% accuracy in real-time candidate skill-gap analysis for open Chevron roles. Increased dashboard usability for non-technical recruiters by translating complex AI outputs into a clear, user-friendly interface, refined across 3 rapid feedback rounds with a 4-person team to surface each candidate's top 3 skill gaps.",
+  "technologies": ["JAVA", "NODE.JS", "TAILWIND CSS", "HTML", "OPENAI", "NETLIFY"],
+  "github": "https://github.com/wlculpepper27/ChevConnect",
+  "demo_link": "https://chev-connect.vercel.app",
+  "badge": "1ST PLACE / MARCH 2025"
+},
     {
-      "id": "nexus-mesh",
-      "title": "NEXUS MESH",
-      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCZ3cd3YbmFc6xO8YSi_5m31T02HDJLBCMh9zgkTN5_295OI8K8iPJxWISsYNs_YVmU_4pvlkA7UB543QJw-lGozvH_BGVoz9DZud0-vT-3b9VcDZ2-HU94Dkvf-8JZNahVfIwQBOjPVSm8uhyQtuNvbRF1kesT7o7-0_5LsWPnpcPzpeAC6YId2t1f7y6A3X570Tu-xC2eWLg3kCD7BWE5SLizNnE8egvbYnWfL1uRQvkfsttVfaR329yRn1r5lUwudTYhgb6BUQGf",
-      "description": "Decentralized asset management platform leveraging distributed ledger technology for secure institutional data transfer.",
-      "technologies": ["NODE.JS", "DOCKER", "AWS"],
-      "github": "https://github.com",
-      "demo_link": "https://example.com",
-      "badge": "BETA / 2023"
-    },
-    {
-      "id": "example-minimal",
-      "title": "MINIMAL PROJECT",
-      "description": "This card omits optional fields to show the UI still works: no thumbnail, no links, no badge.",
-      "technologies": ["HTML", "CSS"]
-    }
+  "id": "grainger-website",
+  "title": "GRAINGER WEBSITE - SUSTAINABILITY PRODUCTS",
+  "description": "Won 1st place among 15+ competing teams by architecting backend algorithms that generated weighted sustainability scores across 10,000+ product data points, cutting manual procurement research time by an estimated 60%. Enabled real-time, dynamic filtering across 10+ sustainability metrics for procurement users by synchronizing backend scoring logic with the React frontend through pair programming with a 4-person team.",
+  "technologies": ["C++", "CSS", "JAVASCRIPT", "REACT", "NETLIFY"],
+  "github": "https://github.com/wlculpepper27/Grainger-Website",
+  "demo_link": "https://grainger-website-wlculpepper27s-projects.vercel.app/",
+  "badge": "1ST PLACE / OCTOBER 2025"
+}
   ]
 }

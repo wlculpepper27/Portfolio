@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 // --- Edit these to change the site name and menu links ---
 const brand = {
-  title: 'Weston Culpepper',
-  homePath: '/',
+  title: 'Weston Culpepper Portfoilio',
+  homePath: '/Home',
 }
 
 // ADD OR DELETE nav bar options here

@@ -12,11 +12,11 @@ const bioSectionLabel = '01 / BIO'
 
 /** Main bio copy — the big paragraph visitors read first. */
 const bioMainParagraph =
-  'I specialize in constructing robust, scalable web architectures. My foundation spans Python, Java, C++, SQL, and HTML but my focus is not on tools alone. It is on constructing maintainable, scalable systems that solve real problems. Currently deepening my command of software engineering principles, I am actively seeking internship and scholarship opportunities where I can contribute to impactful, high-integrity projects and continue evolving as an engineer.'
+  'A highly motivated and dedicated Computer Science student at North Carolina A&T State University with a strong academic record (3.9 GPA) and a passion for building robust, user-centric software solutions. With hands-on experience as a Software Engineering Intern at Aflac, I have a proven ability to streamline complex processes, develop full-stack applications, and collaborate effectively within Agile teams to deliver impactful results.'
 
 /** Secondary text in the bordered box below the main paragraph. */
 const bioAsideParagraph =
-  'Distributed systems. High-performance frontends. The intersection of engineering and design. That’s where I build. Grounded in Python, Java, C++, SQL, and HTML.'
+  'My success in competitive hackathons demonstrates my capacity to thrive under pressure, rapidly prototype AI-driven platforms, and work cross-functionally to transform intricate data into intuitive user experiences. Proficient in a diverse tech stack including Java, Python, C++, React, and Node.js, I am eager to apply my technical expertise, leadership skills, and problem-solving mindset to create innovative solutions that drive efficiency and make a tangible difference. Guided by the Eagle Scout values of leadership and service, I\'m a collaborative team player.'
 
 // =============================================================================
 // Component — matches mockup1/landing-page.html (bio section)

@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="mt-32 flex w-full shrink-0 flex-col items-center justify-between gap-8 bg-gray-100 px-8 py-12 dark:bg-gray-900 md:flex-row md:gap-0">
       <div className="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-gray-600 dark:text-gray-400">
-        © 2026 GWC x GDG Collab
+        © Weston Culpepper
       </div>
 
       <nav aria-label="Social links" className="flex gap-12">

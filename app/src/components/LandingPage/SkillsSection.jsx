@@ -1,12 +1,30 @@
 import { useEffect, useRef, useState } from 'react'
-import { FaAws } from 'react-icons/fa'
+import { FaCode, FaJava } from 'react-icons/fa'
 import {
-  SiDocker,
-  SiGraphql,
+  SiAngular,
+  SiArduino,
+  SiCanva,
+  SiCplusplus,
+  SiCsharp,
+  SiDotnet,
+  SiFigma,
+  SiGit,
+  SiGitea,
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiNetlify,
   SiNodedotjs,
-  SiPostgresql,
+  SiNpm,
+  SiPrettier,
+  SiPrezi,
+  SiPython,
   SiReact,
+  SiTailwindcss,
   SiTypescript,
+  SiVercel,
+  SiVite,
 } from 'react-icons/si'
 import { MainLayoutContainer } from '../../MainLayout.jsx'
 
@@ -19,13 +37,35 @@ const skillsSectionTitle = 'MY STACK'
 const skillsSectionSubtitle = '02 / TECHNICAL DATA'
 
 const skills = [
+  { label: 'C#', Icon: SiCsharp },
+  { label: 'C++', Icon: SiCplusplus },
+  { label: 'HTML5', Icon: SiHtml5 },
+  { label: 'JAVA', Icon: FaJava },
+  { label: 'JAVASCRIPT', Icon: SiJavascript },
+  { label: 'POWERSHELL', Icon: FaCode },
+  { label: 'PYTHON', Icon: SiPython },
   { label: 'TYPESCRIPT', Icon: SiTypescript },
+  { label: 'WINDOWS TERMINAL', Icon: FaCode },
+  { label: 'NETLIFY', Icon: SiNetlify },
+  { label: 'VERCEL', Icon: SiVercel },
+  { label: '.NET', Icon: SiDotnet },
+  { label: 'ANGULAR', Icon: SiAngular },
+  { label: 'JAVAFX', Icon: FaCode },
+  { label: 'NPM', Icon: SiNpm },
+  { label: 'NODEJS', Icon: SiNodedotjs },
   { label: 'REACT', Icon: SiReact },
-  { label: 'POSTGRES', Icon: SiPostgresql },
-  { label: 'AWS INFRA', Icon: FaAws },
-  { label: 'NODE.JS', Icon: SiNodedotjs },
-  { label: 'DOCKER', Icon: SiDocker },
-  { label: 'GRAPHQL', Icon: SiGraphql },
+  { label: 'REACT NATIVE', Icon: SiReact },
+  { label: 'TAILWINDCSS', Icon: SiTailwindcss },
+  { label: 'VITE', Icon: SiVite },
+  { label: 'MYSQL', Icon: SiMysql },
+  { label: 'CANVA', Icon: SiCanva },
+  { label: 'FIGMA', Icon: SiFigma },
+  { label: 'GIT', Icon: SiGit },
+  { label: 'GITEA', Icon: SiGitea },
+  { label: 'GITHUB', Icon: SiGithub },
+  { label: 'ARDUINO', Icon: SiArduino },
+  { label: 'PRETTIER', Icon: SiPrettier },
+  { label: 'PREZI', Icon: SiPrezi }
 ]
 
 /** One “step” = card width (w-32) + gap (gap-4) — must match Tailwind classes on the card row */
