@@ -12,7 +12,7 @@ export default function ResumePage() {
           Resume
         </h1>
 
-        
+        <a
           href={RESUME_PDF_URL}
           download
           className="border-2 border-black px-6 py-2 font-bold uppercase tracking-widest text-black transition-all hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
