@@ -3,9 +3,8 @@ import { FaCode, FaJava } from 'react-icons/fa'
 import {
   SiAngular,
   SiArduino,
-  SiCanva,
   SiCplusplus,
-  SiCsharp,
+  SiSharp,
   SiDotnet,
   SiFigma,
   SiGit,
@@ -37,7 +36,7 @@ const skillsSectionTitle = 'MY STACK'
 const skillsSectionSubtitle = '02 / TECHNICAL DATA'
 
 const skills = [
-  { label: 'C#', Icon: SiCsharp },
+  { label: 'C#', Icon: SiSharp },
   { label: 'C++', Icon: SiCplusplus },
   { label: 'HTML5', Icon: SiHtml5 },
   { label: 'JAVA', Icon: FaJava },
@@ -58,7 +57,6 @@ const skills = [
   { label: 'TAILWINDCSS', Icon: SiTailwindcss },
   { label: 'VITE', Icon: SiVite },
   { label: 'MYSQL', Icon: SiMysql },
-  { label: 'CANVA', Icon: SiCanva },
   { label: 'FIGMA', Icon: SiFigma },
   { label: 'GIT', Icon: SiGit },
   { label: 'GITEA', Icon: SiGitea },
