@@ -11,7 +11,7 @@ const heroHeadlineLines = ['BUILDING', 'DIGITAL', 'STRUCTURES.']
 
 /** Photo on the right. `alt` is read by screen readers; keep it descriptive. */
 const heroPortrait = {
-  src: 'headshot.jpg',
+  src: 'app/public/headshot.jpg',
   alt: 'Professional portrait',
 }
 

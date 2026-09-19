@@ -40,7 +40,7 @@ export default function BioSection() {
 
           {/* Right column: main bio + optional aside */}
           <div className="lg:col-span-8">
-            <p className="max-w-3xl text-3xl leading-relaxed font-medium text-black md:text-4xl">
+            <p className="max-w-3xl text-lg leading-relaxed font-medium text-black md:text-xl">
               {bioMainParagraph}
             </p>
 
