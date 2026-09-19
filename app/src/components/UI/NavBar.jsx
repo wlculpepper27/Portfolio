@@ -13,6 +13,7 @@ const navLinks = [
   { label: 'Projects', to: '/#projects' },
   { label: 'Skills', to: '/#skills' },
   { label: 'Resume', to: '/#resume' },
+  { label: 'Resume', to: '/resume' },
 ]
 
 const contactButton = {

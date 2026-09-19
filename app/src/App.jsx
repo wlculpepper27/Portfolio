@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MainLayout from './MainLayout.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import LandingPage from './pages/LandingPage.jsx'
+import ResumePage from './pages/ResumePage.jsx'
 
 /**
  * All routes below share MainLayout: NavBar, scrollable <main>, Footer.
@@ -14,6 +15,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/resume" element={<ResumePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
