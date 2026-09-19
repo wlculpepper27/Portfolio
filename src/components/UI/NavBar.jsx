@@ -24,8 +24,20 @@ const contactButton = {
 const desktopLinkClass =
   'border-b-2 border-transparent pb-1 font-[Inter] font-bold uppercase tracking-tight text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white'
 
+/** True if `to` is a same-page anchor like "/#bio". */
+function isAnchor(to) {
+  return to.startsWith('/#')
+}
+
+/** Extract the "#bio" part from "/#bio". */
+function anchorId(to) {
+  return to.slice(1) // "/#bio" -> "#bio"
+}
+
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   // When the mobile menu is open: lock page scroll + close menu with Escape
   useEffect(() => {
@@ -45,8 +57,36 @@ export default function NavBar() {
     }
   }, [menuOpen])
 
+  // Scroll to the anchor after navigating to "/" (or if already there).
+  // React Router doesn't auto-scroll to hash fragments, so we handle it here.
+  useEffect(() => {
+    if (!location.hash) return
+    const el = document.getElementById(location.hash.slice(1))
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [location])
+
   function closeMenu() {
     setMenuOpen(false)
+  }
+
+  /** Handle click on a nav item — either route, anchor, or both. */
+  function handleNavClick(e, to) {
+    if (!isAnchor(to)) return // let React Router handle normal routes
+
+    e.preventDefault()
+    closeMenu()
+
+    const hash = anchorId(to)
+
+    if (location.pathname !== '/') {
+      // Navigate home first; the useEffect above will scroll once the hash updates.
+      navigate('/' + hash)
+    } else {
+      // Already home — scroll directly and update the hash without a reload.
+      const el = document.getElementById(hash.slice(1))
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      window.history.replaceState(null, '', hash)
+    }
   }
 
   return (
@@ -63,7 +103,12 @@ export default function NavBar() {
         {/* Desktop: show links in a row */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((item) => (
-            <Link key={item.label} to={item.to} className={desktopLinkClass}>
+            <Link
+              key={item.label}
+              to={item.to}
+              className={desktopLinkClass}
+              onClick={(e) => handleNavClick(e, item.to)}
+            >
               {item.label}
             </Link>
           ))}
@@ -128,7 +173,7 @@ export default function NavBar() {
                 key={item.label}
                 to={item.to}
                 className="border-b border-gray-100 py-4 text-lg font-bold uppercase tracking-tight text-gray-600 dark:border-gray-900 dark:text-gray-300"
-                onClick={closeMenu}
+                onClick={(e) => handleNavClick(e, item.to)}
               >
                 {item.label}
               </Link>
