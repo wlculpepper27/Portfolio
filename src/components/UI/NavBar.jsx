@@ -10,8 +10,8 @@ const brand = {
 // ADD OR DELETE nav bar options here
 const navLinks = [
   { label: 'Bio', to: '/#bio' },
-  { label: 'Projects', to: '/#projects' },
   { label: 'Skills', to: '/#skills' },
+  { label: 'Projects', to: '/#projects' },
   { label: 'Resume', to: '/resume' },
 ]
 

@@ -1,10 +1,12 @@
+// Put your resume PDF at public/resume/Weston_Culpepper_Resume.pdf — anything
+// dropped in /public is served as-is, so this path just needs to match the filename.
 const RESUME_PDF_URL = `${import.meta.env.BASE_URL}resume/Weston_Culpepper_Resume.pdf`
 
 export default function ResumePage() {
   return (
-    <div className="flex h-[calc(100vh-88px)] flex-col">
+    <div className="flex h-full flex-col overflow-hidden">
       {/* Slim header with title + download button */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-8 py-4 dark:border-gray-800">
+      <div className="flex shrink-0 flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-8 py-4 dark:border-gray-800">
         <h1 className="text-2xl font-black uppercase tracking-tighter text-black dark:text-white">
           Resume
         </h1>
