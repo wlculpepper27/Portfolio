@@ -75,13 +75,13 @@ export default function ProjectCard({ project }) {
       {tech?.length ? (
         <div className="flex flex-wrap gap-2">
           {tech.map((tag) => (
-            <span
-              key={tag}
-              className="border border-gray-800 px-3 py-1 font-label text-[10px] uppercase"
-            >
-              {tag}
-            </span>
-          ))}
+  <span
+    key={tag}
+    className="border border-gray-800 px-3 py-1 font-label text-[10px] uppercase transition-colors duration-200 group-hover:border-white group-hover:bg-white group-hover:text-black"
+  >
+    {tag}
+  </span>
+))}
         </div>
       ) : null}
     </article>
