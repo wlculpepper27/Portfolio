@@ -16,7 +16,7 @@
     {
   "id": "chevconnect",
   "title": "CHEVCONNECT - JOB MATCH",
-  "thumbnail": "/projects/Chevconnect.png",
+  "thumbnail": "/projects/chevconnect.png",
   "description": "Won 1st place among 15+ competing teams by building the backend for an AI-powered job-matching platform in a 24-hour hackathon, achieving 95% accuracy in real-time candidate skill-gap analysis for open Chevron roles. Increased dashboard usability for non-technical recruiters by translating complex AI outputs into a clear, user-friendly interface, refined across 3 rapid feedback rounds with a 4-person team to surface each candidate's top 3 skill gaps.",
   "technologies": ["JAVA", "NODE.JS", "TAILWIND CSS", "HTML", "OPENAI", "NETLIFY"],
   "github": "https://github.com/wlculpepper27/ChevConnect",
@@ -26,7 +26,7 @@
     {
   "id": "grainger-website",
   "title": "GRAINGER WEBSITE - SUSTAINABILITY PRODUCTS",
-  "thumbnail": "/projects/Grainger.png",
+  "thumbnail": "/projects/grainger.png",
   "description": "Won 1st place among 15+ competing teams by architecting backend algorithms that generated weighted sustainability scores across 10,000+ product data points, cutting manual procurement research time by an estimated 60%. Enabled real-time, dynamic filtering across 10+ sustainability metrics for procurement users by synchronizing backend scoring logic with the React frontend through pair programming with a 4-person team.",
   "technologies": ["C++", "CSS", "JAVASCRIPT", "REACT", "NETLIFY"],
   "github": "https://github.com/wlculpepper27/Grainger-Website",
