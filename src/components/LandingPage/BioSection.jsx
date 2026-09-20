@@ -12,7 +12,7 @@ const bioSectionLabel = '01 / BIO'
 
 /** Main bio copy — the big paragraph visitors read first. */
 const bioMainParagraph =
-  'A highly motivated and dedicated Computer Science student at North Carolina A&T State University with a strong academic record (3.9 GPA) and a passion for building robust, user-centric software solutions. With hands-on experience as a Software Engineering Intern at Aflac, I have a proven ability to streamline complex processes, develop full-stack applications, and collaborate effectively within Agile teams to deliver impactful results.'
+  'My name is Weston Culpepper, a highly motivated and dedicated Computer Science student at North Carolina A&T State University with a strong academic record (3.9 GPA) and a passion for building robust, user-centric software solutions. With hands-on experience as a Software Engineering Intern at Aflac, I have a proven ability to streamline complex processes, develop full-stack applications, and collaborate effectively within Agile teams to deliver impactful results.'
 
 /** Secondary text in the bordered box below the main paragraph. */
 const bioAsideParagraph =

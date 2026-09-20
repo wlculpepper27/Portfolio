@@ -71,7 +71,7 @@ export default function HeroSection() {
           <img
             src={heroPortrait.src}
             alt={heroPortrait.alt}
-            className="aspect-square w-full object-cover contrast-125"
+            className="aspect-square w-full object-cover"
           />
         </div>
       </section>
