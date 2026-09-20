@@ -10,15 +10,19 @@ export function MainLayoutContainer({ children, className = '' }) {
 
 export default function MainLayout() {
   const location = useLocation()
-  const hideFooter = location.pathname === '/resume'
+  const isResume = location.pathname === '/resume'
 
   return (
-    <div className="font-body flex h-svh w-full flex-col bg-white text-black antialiased dark:bg-black dark:text-white">
+    <div
+      className={`font-body flex w-full flex-col bg-white text-black antialiased dark:bg-black dark:text-white ${
+        isResume ? 'h-svh' : 'min-h-svh'
+      }`}
+    >
       <NavBar />
       <main className="flex min-h-0 w-full min-w-0 flex-1 flex-col">
         <Outlet />
       </main>
-      {!hideFooter && <Footer />}
+      {!isResume && <Footer />}
     </div>
   )
 }
