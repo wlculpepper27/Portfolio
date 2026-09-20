@@ -31,12 +31,17 @@ export default function BioSection() {
       */}
       <MainLayoutContainer>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          {/* Left column: section index / theme label */}
-          <div className="lg:col-span-4">
-            <span className="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant">
-              {bioSectionLabel}
-            </span>
-          </div>
+          {/* Left column: shield image + section label */}
+<div className="flex flex-col items-start gap-6 lg:col-span-4">
+  <img
+    src="/WC_Shield.jpg"
+    alt="WC shield"
+    className="h-48 w-48 object-contain"
+  />
+  <span className="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant">
+    {bioSectionLabel}
+  </span>
+</div>
 
           {/* Right column: main bio + optional aside */}
           <div className="lg:col-span-8">

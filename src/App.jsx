@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/contact" element={<ContactPage />} />
           <Route path="/resume" element={<ResumePage />} />
         </Route>
       </Routes>

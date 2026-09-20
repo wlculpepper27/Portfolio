@@ -17,7 +17,7 @@ const navLinks = [
 
 const contactButton = {
   label: 'Contact',
-  to: '/contact',
+  to: 'mailto:westonculpepper27@gmail.com',
 }
 
 // Shared look for desktop text links (matches the mockup)
@@ -102,12 +102,13 @@ useEffect(() => {
     <>
       {/* Top bar (always visible) */}
       <nav className="sticky top-0 z-40 flex w-full shrink-0 items-center justify-between bg-white px-8 py-6 dark:bg-black">
-        <Link
-          to={brand.homePath}
-          className="text-2xl font-black tracking-tighter text-black dark:text-white"
-        >
-          {brand.title}
-        </Link>
+        <Link to={brand.homePath} className="flex items-center">
+  <img
+    src="/WC_Shield.jpg"
+    alt="WC Xperience"
+    className="h-10 w-auto"
+  />
+</Link>
 
         {/* Desktop: show links in a row */}
         <div className="hidden items-center gap-8 md:flex">
@@ -121,12 +122,12 @@ useEffect(() => {
               {item.label}
             </Link>
           ))}
-          <Link
-            to={contactButton.to}
-            className="bg-black px-6 py-2 font-bold uppercase tracking-tight text-white transition-all hover:bg-gray-800 active:scale-95 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-          >
-            {contactButton.label}
-          </Link>
+          <a
+  href={contactButton.to}
+  className="bg-white px-6 py-2 font-bold uppercase tracking-tight text-black transition-all hover:bg-gray-200 active:scale-95"
+>
+  {contactButton.label}
+</a>
         </div>
 
         {/* Mobile: burger button */}
@@ -189,13 +190,13 @@ useEffect(() => {
             ))}
 
             {/* Contact is separate from navLinks so it can look like a button (matches desktop) */}
-            <Link
-              to={contactButton.to}
-              className="mt-6 bg-black px-6 py-3 text-center font-bold uppercase tracking-tight text-white dark:bg-white dark:text-black"
-              onClick={closeMenu}
-            >
-              {contactButton.label}
-            </Link>
+            <a
+  href={contactButton.to}
+  className="mt-6 bg-white px-6 py-3 text-center font-bold uppercase tracking-tight text-black"
+  onClick={closeMenu}
+>
+  {contactButton.label}
+</a>
           </div>
         </aside>
       </div>
