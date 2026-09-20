@@ -4,7 +4,7 @@ const RESUME_PDF_URL = `${import.meta.env.BASE_URL}resume/Weston_Culpepper_Resum
 
 export default function ResumePage() {
   return (
-    <div className="flex h-[calc(100vh-88px)] flex-col overflow-hidden">
+    <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
       {/* Slim header with title + download button */}
       <div className="flex shrink-0 flex-wrap items-center justify-between gap-4 border-b border-gray-200 px-8 py-4 dark:border-gray-800">
         <h1 className="text-2xl font-black uppercase tracking-tighter text-black dark:text-white">
@@ -20,7 +20,7 @@ export default function ResumePage() {
         </a>
       </div>
 
-      {/* Full-height PDF viewer */}
+      {/* Full-height PDF viewer — fills remaining space */}
       <iframe
         src={RESUME_PDF_URL}
         title="Resume"
