@@ -20,7 +20,7 @@ const contactButton = {
   to: 'mailto:westonculpepper27@gmail.com',
 }
 
-// Shared look for desktop text links (matches the mockup)
+// Shared look for desktop text links
 const desktopLinkClass =
   'border-b-2 border-transparent pb-1 font-[Inter] font-bold uppercase tracking-tight text-gray-400 transition-colors hover:text-white'
 
@@ -58,21 +58,20 @@ export default function NavBar() {
   }, [menuOpen])
 
   // Scroll to the anchor after navigating to "/" (or if already there).
-  // React Router doesn't auto-scroll to hash fragments, so we handle it here.
   useEffect(() => {
-  // Only auto-scroll for anchor links on the home page.
-  if (location.pathname !== '/') return
-  if (!location.hash) return
+    if (location.pathname !== '/') return
+    if (!location.hash) return
 
-  const id = location.hash.slice(1)
-  const el = document.getElementById(id)
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-}, [location.pathname, location.hash])
+    const id = location.hash.slice(1)
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [location.pathname, location.hash])
 
-// Scroll to top when the pathname changes (but not when only the hash changes).
-useEffect(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
-}, [location.pathname])
+  // Scroll to top when the pathname changes (but not when only the hash changes).
+  useEffect(() => {
+    if (location.hash) return
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [location.pathname, location.hash])
 
   function closeMenu() {
     setMenuOpen(false)
@@ -88,10 +87,8 @@ useEffect(() => {
     const hash = anchorId(to)
 
     if (location.pathname !== '/') {
-      // Navigate home first; the useEffect above will scroll once the hash updates.
       navigate('/' + hash)
     } else {
-      // Already home — scroll directly and update the hash without a reload.
       const el = document.getElementById(hash.slice(1))
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
       window.history.replaceState(null, '', hash)
@@ -102,14 +99,13 @@ useEffect(() => {
     <>
       {/* Top bar (always visible) */}
       <nav className="sticky top-0 z-40 flex w-full shrink-0 items-center justify-between bg-black px-8 py-6">
-
         <Link to={brand.homePath} className="flex items-center">
-  <img
-    src="/WCremovebg.png"
-    alt="WC Xperience"
-    className="h-10 w-auto"
-  />
-</Link>
+          <img
+            src="/WCremovebg.png"
+            alt="WC Xperience"
+            className="h-10 w-auto"
+          />
+        </Link>
 
         {/* Desktop: show links in a row */}
         <div className="hidden items-center gap-8 md:flex">
@@ -124,11 +120,11 @@ useEffect(() => {
             </Link>
           ))}
           <a
-  href={contactButton.to}
-  className="bg-white px-6 py-2 font-bold uppercase tracking-tight text-black transition-all hover:bg-gray-200 active:scale-95"
->
-  {contactButton.label}
-</a>
+            href={contactButton.to}
+            className="bg-white px-6 py-2 font-bold uppercase tracking-tight text-black transition-all hover:bg-gray-200 active:scale-95"
+          >
+            {contactButton.label}
+          </a>
         </div>
 
         {/* Mobile: burger button */}
@@ -139,20 +135,16 @@ useEffect(() => {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span className="material-symbols-outlined text-3xl text-white">
-  {menuOpen ? 'close' : 'menu'}
-</span>
+            {menuOpen ? 'close' : 'menu'}
+          </span>
         </button>
       </nav>
 
-      {/*
-        Mobile-only drawer (hidden on md+ screens).
-        When menuOpen is false: overlay ignores clicks; panel is slid off-screen (translate-x-full).
-        When menuOpen is true: overlay fades in; panel slides in from the right (translate-x-0).
-      */}
+      {/* Mobile-only drawer */}
       <div
         className={`fixed inset-0 z-50 md:hidden ${menuOpen ? '' : 'pointer-events-none'}`}
       >
-        {/* Semi-transparent layer behind the panel — tap anywhere here to dismiss the menu */}
+        {/* Semi-transparent layer behind the panel */}
         <button
           type="button"
           aria-label="Close menu"
@@ -162,41 +154,42 @@ useEffect(() => {
           onClick={closeMenu}
         />
 
-        {/* White column that holds the mobile links; slides horizontally with CSS transition-transform */}
+        {/* Column that holds the mobile links */}
         <aside
-  className={`absolute top-0 right-0 flex h-full w-full max-w-sm flex-col bg-black shadow-xl transition-transform duration-300 ease-out ${
-    menuOpen ? 'translate-x-0' : 'translate-x-full'
-  }`}
->
-          {/* Top row: X button (same as closing — some users look for an explicit close control) */}
+          className={`absolute top-0 right-0 flex h-full w-full max-w-sm flex-col bg-black shadow-xl transition-transform duration-300 ease-out ${
+            menuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          {/* Top row: X button */}
           <div className="flex justify-end border-b border-gray-800 px-6 py-5">
-  <button type="button" aria-label="Close menu" onClick={closeMenu}>
-    <span className="material-symbols-outlined text-3xl text-white">
-      close
-    </span>
-  </button>
-</div>
+            <button type="button" aria-label="Close menu" onClick={closeMenu}>
+              <span className="material-symbols-outlined text-3xl text-white">
+                close
+              </span>
+            </button>
+          </div>
 
-          {/* Same navLinks array as desktop — .map() renders one Link per item */}
+          {/* Same navLinks array as desktop */}
           <div className="flex flex-col gap-1 px-6 pt-4 pb-8">
             {navLinks.map((item) => (
               <Link
                 key={item.label}
                 to={item.to}
-                className="border-b border-gray-900 py-4 text-lg font-bold uppercase tracking-tight text-gray-300"                onClick={(e) => handleNavClick(e, item.to)}
+                className="border-b border-gray-900 py-4 text-lg font-bold uppercase tracking-tight text-gray-300"
+                onClick={(e) => handleNavClick(e, item.to)}
               >
                 {item.label}
               </Link>
             ))}
 
-            {/* Contact is separate from navLinks so it can look like a button (matches desktop) */}
+            {/* Contact button */}
             <a
-  href={contactButton.to}
-  className="mt-6 bg-white px-6 py-3 text-center font-bold uppercase tracking-tight text-black"
-  onClick={closeMenu}
->
-  {contactButton.label}
-</a>
+              href={contactButton.to}
+              className="mt-6 bg-white px-6 py-3 text-center font-bold uppercase tracking-tight text-black"
+              onClick={closeMenu}
+            >
+              {contactButton.label}
+            </a>
           </div>
         </aside>
       </div>
