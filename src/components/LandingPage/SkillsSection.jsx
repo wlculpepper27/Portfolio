@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { FaCode, FaJava } from 'react-icons/fa'
 import {
   SiAngular,
@@ -26,6 +26,10 @@ import {
   SiVite,
 } from 'react-icons/si'
 import { MainLayoutContainer } from '../../MainLayout.jsx'
+
+// =============================================================================
+// Skills section — edit the title, subtitle, and skill list below.
+// =============================================================================
 
 const skillsSectionTitle = 'MY STACK'
 const skillsSectionSubtitle = '02 / TECHNICAL DATA'
@@ -61,8 +65,8 @@ const skills = [
   { label: 'PREZI', Icon: SiPrezi },
 ]
 
-const SLIDE_STEP_REM = 9
-
+// Skill cards — used by both mobile grid and desktop grid.
+// group + group-hover + group-active make the icon & label react to the card's state.
 const skillCardClass =
   'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-gray-900 transition-colors duration-300 hover:bg-accent active:bg-accent md:h-40 md:w-40'
 
@@ -72,69 +76,62 @@ const skillIconClass =
 const skillLabelClass =
   'font-label text-[10px] tracking-widest text-white transition-colors group-hover:text-white group-active:text-white'
 
-function SkillsCarouselMobile({ items }) {
-  const [index, setIndex] = useState(0)
-  const directionRef = useRef(1)
+/**
+ * Mobile-only: 2×2 grid with explicit prev/next arrow buttons.
+ * No auto-play, no side-scrolling — page stays stationary.
+ * Each "page" shows 4 skills, arranged 2 across and 2 down.
+ */
+function SkillsGridMobile({ items }) {
+  const PER_PAGE = 4
+  const totalPages = Math.ceil(items.length / PER_PAGE)
+  const [page, setPage] = useState(0)
 
-  useEffect(() => {
-    if (items.length <= 1) return
-    const timer = window.setInterval(() => {
-      setIndex((prev) => {
-        const next = prev + directionRef.current
-        if (next >= items.length - 1) {
-          directionRef.current = -1
-          return items.length - 1
-        }
-        if (next <= 0) {
-          directionRef.current = 1
-          return 0
-        }
-        return next
-      })
-    }, 3000)
-    return () => window.clearInterval(timer)
-  }, [items.length])
+  const start = page * PER_PAGE
+  const visible = items.slice(start, start + PER_PAGE)
+
+  const goPrev = () => setPage((p) => Math.max(0, p - 1))
+  const goNext = () => setPage((p) => Math.min(totalPages - 1, p + 1))
+
+  const arrowClass =
+    'border-2 border-accent px-5 py-3 text-lg font-bold text-accent transition-colors hover:bg-accent hover:text-white active:bg-accent active:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-accent'
 
   return (
     <div className="md:hidden">
-      <div className="overflow-hidden">
-        <div
-          className="flex gap-4 transition-transform duration-500 ease-out motion-reduce:transition-none"
-          style={{
-            transform: `translateX(calc(-${index} * ${SLIDE_STEP_REM}rem))`,
-          }}
-        >
-          {items.map(({ label, Icon }) => (
-            <div key={label} className={skillCardClass}>
-              <Icon className={skillIconClass} aria-hidden />
-              <span className={skillLabelClass}>{label}</span>
-            </div>
-          ))}
-        </div>
+      {/* 2×2 grid — centered, fixed width so it doesn't stretch weirdly */}
+      <div className="mx-auto grid w-fit grid-cols-2 gap-4">
+        {visible.map(({ label, Icon }) => (
+          <div key={label} className={skillCardClass}>
+            <Icon className={skillIconClass} aria-hidden />
+            <span className={skillLabelClass}>{label}</span>
+          </div>
+        ))}
       </div>
 
-      <div
-        className="mt-6 flex justify-center gap-2"
-        role="tablist"
-        aria-label="Skill slides"
-      >
-        {items.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            role="tab"
-            aria-selected={i === index}
-            aria-label={`Show skill ${i + 1} of ${items.length}`}
-            className={`h-2 w-2 border border-accent transition-colors ${
-              i === index ? 'bg-accent' : 'bg-transparent'
-            }`}
-            onClick={() => {
-              setIndex(i)
-              if (i === items.length - 1) directionRef.current = -1
-              else if (i === 0) directionRef.current = 1
-            }}
-          />
-        ))}
+      {/* Arrows + page indicator */}
+      <div className="mt-8 flex items-center justify-center gap-6">
+        <button
+          type="button"
+          onClick={goPrev}
+          disabled={page === 0}
+          aria-label="Previous skills"
+          className={arrowClass}
+        >
+          ←
+        </button>
+
+        <span className="font-label text-xs uppercase tracking-widest text-accent">
+          {page + 1} / {totalPages}
+        </span>
+
+        <button
+          type="button"
+          onClick={goNext}
+          disabled={page === totalPages - 1}
+          aria-label="Next skills"
+          className={arrowClass}
+        >
+          →
+        </button>
       </div>
     </div>
   )
@@ -142,19 +139,22 @@ function SkillsCarouselMobile({ items }) {
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-32">
+    <section id="mystack" className="py-32">
       <MainLayoutContainer>
-        <div className="mb-24 flex items-baseline justify-between">
+        {/* Header — stacked on mobile, side-by-side on desktop */}
+        <div className="mb-24 flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between md:gap-0">
           <h2 className="text-5xl font-black uppercase tracking-tighter text-white">
             {skillsSectionTitle}
           </h2>
           <span className="font-label text-xs uppercase tracking-widest text-accent">
-  {skillsSectionSubtitle}
-</span>
+            {skillsSectionSubtitle}
+          </span>
         </div>
 
-        <SkillsCarouselMobile items={skills} />
+        {/* Mobile: 2×2 grid with arrows */}
+        <SkillsGridMobile items={skills} />
 
+        {/* Desktop: full responsive grid */}
         <div
           className="hidden flex-wrap gap-4 md:flex"
           role="list"
