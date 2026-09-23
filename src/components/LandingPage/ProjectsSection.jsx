@@ -45,9 +45,9 @@ export default function ProjectsSection() {
           <h2 className="text-5xl font-black uppercase tracking-tighter">
             {sectionTitle}
           </h2>
-          <span className="font-label text-xs uppercase tracking-widest text-gray-500">
-            {sectionSubtitle}
-          </span>
+          <span className="font-label text-xs uppercase tracking-widest text-accent">
+  {sectionSubtitle}
+</span>
         </div>
 
         {loading ? (

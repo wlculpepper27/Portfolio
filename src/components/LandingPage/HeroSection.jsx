@@ -19,9 +19,9 @@ export default function HeroSection() {
     <MainLayoutContainer className="pt-24 pb-32">
       <section className="grid grid-cols-1 items-end gap-12 lg:grid-cols-12">
         <div className="lg:col-span-8">
-          <p className="font-label mb-6 text-sm uppercase tracking-[0.2em] text-gray-400">
-            {heroEyebrow}
-          </p>
+          <p className="font-label mb-6 text-sm uppercase tracking-[0.2em] text-accent">
+  {heroEyebrow}
+</p>
 
           <h1 className="mb-8 text-6xl font-black text-white uppercase leading-[0.9] tracking-tighter md:text-8xl">
             {heroHeadlineLines.map((line, index) => (

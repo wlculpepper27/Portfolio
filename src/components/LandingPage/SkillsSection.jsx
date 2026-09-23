@@ -148,9 +148,9 @@ export default function SkillsSection() {
           <h2 className="text-5xl font-black uppercase tracking-tighter text-white">
             {skillsSectionTitle}
           </h2>
-          <span className="font-label text-xs uppercase tracking-widest text-gray-400">
-            {skillsSectionSubtitle}
-          </span>
+          <span className="font-label text-xs uppercase tracking-widest text-accent">
+  {skillsSectionSubtitle}
+</span>
         </div>
 
         <SkillsCarouselMobile items={skills} />
