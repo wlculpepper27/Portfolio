@@ -94,6 +94,10 @@
 
 body {
   margin: 0;
+  html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 }
 
 /* Full-width app shell (mockup-style); portfolio pages use MainLayout + max-w-7xl inner column */

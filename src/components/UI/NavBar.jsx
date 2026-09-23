@@ -8,7 +8,7 @@ const brand = {
 
 const navLinks = [
   { label: 'Bio', to: '/#bio' },
-  { label: 'Skills', to: '/#skills' },
+  { label: 'My Stack', to: '/#skills' },
   { label: 'Projects', to: '/#projects' },
   { label: 'Resume', to: '/resume' },
 ]
@@ -148,15 +148,18 @@ export default function NavBar() {
 
           <div className="flex flex-col gap-1 px-6 pt-4 pb-8">
             {navLinks.map((item) => (
-              <Link
-                key={item.label}
-                to={item.to}
-                className="border-b border-gray-900 py-4 text-lg font-bold uppercase tracking-tight text-accent hover:text-accent-hover"
-                onClick={(e) => handleNavClick(e, item.to)}
-              >
-                {item.label}
-              </Link>
-            ))}
+  <Link
+    key={item.label}
+    to={item.to}
+    className="border-b border-gray-900 py-4 text-lg font-bold uppercase tracking-tight text-accent hover:text-accent-hover"
+    onClick={(e) => {
+      handleNavClick(e, item.to)
+      closeMenu()
+    }}
+  >
+    {item.label}
+  </Link>
+))}
 
             <a
               href={contactButton.to}
