@@ -13,25 +13,23 @@ export default function BioSection() {
     <section id="bio" className="bg-gray-950 py-32">
       <MainLayoutContainer>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          {/* Left column: shield image + section label */}
           <div className="flex flex-col items-start gap-6 lg:col-span-4">
             <img
               src="/WC_Shield.jpg"
               alt="WC shield"
               className="h-48 w-48 object-contain"
             />
-            <span className="font-label text-xs uppercase tracking-[0.3em] text-gray-400">
+            <span className="font-label text-xs uppercase tracking-[0.3em] text-accent">
               {bioSectionLabel}
             </span>
           </div>
 
-          {/* Right column: main bio + optional aside */}
           <div className="lg:col-span-8">
             <p className="max-w-3xl text-lg leading-relaxed text-white md:text-xl">
               {bioMainParagraph}
             </p>
 
-            <div className="mt-16 max-w-xl border-l-2 border-white pl-8">
+            <div className="mt-16 max-w-xl border-l-2 border-accent pl-8">
               <p className="leading-loose text-gray-400">
                 {bioAsideParagraph}
               </p>

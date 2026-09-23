@@ -27,10 +27,6 @@ import {
 } from 'react-icons/si'
 import { MainLayoutContainer } from '../../MainLayout.jsx'
 
-// =============================================================================
-// Skills section — edit the title, subtitle, and skill list below.
-// =============================================================================
-
 const skillsSectionTitle = 'MY STACK'
 const skillsSectionSubtitle = '02 / TECHNICAL DATA'
 
@@ -65,19 +61,17 @@ const skills = [
   { label: 'PREZI', Icon: SiPrezi },
 ]
 
-/** One "step" = card width (w-32) + gap (gap-4) — must match Tailwind classes on the card row */
 const SLIDE_STEP_REM = 9
 
 const skillCardClass =
-  'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-gray-900 transition-colors duration-300 hover:bg-white md:h-40 md:w-40'
+  'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-gray-900 transition-colors duration-300 hover:bg-accent md:h-40 md:w-40'
 
 const skillIconClass =
-  'mb-2 text-4xl text-white transition-colors group-hover:text-black'
+  'mb-2 text-4xl text-white transition-colors group-hover:text-white'
 
 const skillLabelClass =
-  'font-label text-[10px] tracking-widest text-white transition-colors group-hover:text-black'
+  'font-label text-[10px] tracking-widest text-white transition-colors group-hover:text-white'
 
-/** Mobile-only: auto-playing carousel with smooth slide + dot controls */
 function SkillsCarouselMobile({ items }) {
   const [index, setIndex] = useState(0)
   const directionRef = useRef(1)
@@ -119,7 +113,6 @@ function SkillsCarouselMobile({ items }) {
         </div>
       </div>
 
-      {/* Dots */}
       <div
         className="mt-6 flex justify-center gap-2"
         role="tablist"
@@ -132,8 +125,8 @@ function SkillsCarouselMobile({ items }) {
             role="tab"
             aria-selected={i === index}
             aria-label={`Show skill ${i + 1} of ${items.length}`}
-            className={`h-2 w-2 border border-white transition-colors ${
-              i === index ? 'bg-white' : 'bg-transparent'
+            className={`h-2 w-2 border border-accent transition-colors ${
+              i === index ? 'bg-accent' : 'bg-transparent'
             }`}
             onClick={() => {
               setIndex(i)
@@ -147,7 +140,6 @@ function SkillsCarouselMobile({ items }) {
   )
 }
 
-// =============================================================================
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-32">
@@ -163,7 +155,6 @@ export default function SkillsSection() {
 
         <SkillsCarouselMobile items={skills} />
 
-        {/* Desktop: static grid */}
         <div
           className="hidden flex-wrap gap-4 md:flex"
           role="list"

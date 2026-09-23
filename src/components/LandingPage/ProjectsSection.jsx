@@ -2,17 +2,11 @@ import { useEffect, useState } from 'react'
 import { MainLayoutContainer } from '../../MainLayout.jsx'
 import ProjectCard from './ProjectCard.jsx'
 
-// Loaded from /public/projects/projects.json (see fetch below)
 const PROJECTS_JSON_URL = `${import.meta.env.BASE_URL}projects/projects.json`
 
 const sectionTitle = 'PROJECTS'
 const sectionSubtitle = '03 / IMPLEMENTATIONS'
 
-/**
- * Fetches the projects array from JSON, then maps each item to ProjectCard.
- * Optional fields in JSON (github, demo_link, thumbnail, badge) are read with ?.
- * in ProjectCard so missing keys do not break the UI.
- */
 export default function ProjectsSection() {
   const [projects, setProjects] = useState([])
   const [loading, setLoading] = useState(true)
@@ -27,7 +21,6 @@ export default function ProjectsSection() {
         if (!response.ok) throw new Error(`HTTP ${response.status}`)
         const data = await response.json()
         if (!cancelled) {
-          // Root may be { projects: [...] } (with _comment / _schemaExample) or a plain array
           const list = Array.isArray(data) ? data : data?.projects ?? []
           setProjects(Array.isArray(list) ? list : [])
           setError(null)
@@ -76,7 +69,7 @@ export default function ProjectsSection() {
             href="https://github.com/wlculpepper27"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-white px-12 py-4 font-bold uppercase tracking-widest transition-all hover:bg-white hover:text-black"
+            className="border-2 border-accent px-12 py-4 font-bold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-white"
           >
             VIEW ALL REPOSITORIES
           </a>

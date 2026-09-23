@@ -77,7 +77,7 @@ export default function ProjectCard({ project }) {
           {tech.map((tag) => (
   <span
     key={tag}
-    className="border border-gray-800 px-3 py-1 font-label text-[10px] uppercase transition-colors duration-200 hover:border-white hover:bg-white hover:text-black"
+    className="border border-gray-800 px-3 py-1 font-label text-[10px] uppercase transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-white"
   >
     {tag}
   </span>
