@@ -70,13 +70,13 @@ const skills = [
 const SLIDE_STEP_REM = 9
 
 const skillCardClass =
-  'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-surface-container-low transition-colors duration-300 hover:bg-black md:h-40 md:w-40'
+  'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-gray-900 transition-colors duration-300 hover:bg-white md:h-40 md:w-40'
 
 const skillIconClass =
-  'mb-2 text-4xl text-black transition-colors group-hover:text-white dark:text-white'
+  'mb-2 text-4xl text-white transition-colors group-hover:text-black'
 
 const skillLabelClass =
-  'font-label text-[10px] tracking-widest text-black transition-colors group-hover:text-white dark:text-white'
+  'font-label text-[10px] tracking-widest text-white transition-colors group-hover:text-black'
 
 /** Mobile-only: auto-playing carousel with smooth slide + dot controls */
 function SkillsCarouselMobile({ items }) {
@@ -136,9 +136,9 @@ function SkillsCarouselMobile({ items }) {
             role="tab"
             aria-selected={i === index}
             aria-label={`Show skill ${i + 1} of ${items.length}`}
-            className={`h-2 w-2 border border-black transition-colors dark:border-white ${
-              i === index ? 'bg-black dark:bg-white' : 'bg-transparent'
-            }`}
+            className={`h-2 w-2 border border-white transition-colors ${
+  i === index ? 'bg-white' : 'bg-transparent'
+}`}
             onClick={() => {
               setIndex(i)
               if (i === items.length - 1) directionRef.current = -1
@@ -157,12 +157,12 @@ export default function SkillsSection() {
     <section id="skills" className="py-32">
       <MainLayoutContainer>
         <div className="mb-24 flex items-baseline justify-between">
-          <h2 className="text-5xl font-black uppercase tracking-tighter text-black dark:text-white">
-            {skillsSectionTitle}
-          </h2>
-          <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant">
-            {skillsSectionSubtitle}
-          </span>
+          <h2 className="text-5xl font-black uppercase tracking-tighter text-white">
+  {skillsSectionTitle}
+</h2>
+<span className="font-label text-xs uppercase tracking-widest text-gray-400">
+  {skillsSectionSubtitle}
+</span>
         </div>
 
         <SkillsCarouselMobile items={skills} />

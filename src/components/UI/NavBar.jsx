@@ -22,7 +22,7 @@ const contactButton = {
 
 // Shared look for desktop text links (matches the mockup)
 const desktopLinkClass =
-  'border-b-2 border-transparent pb-1 font-[Inter] font-bold uppercase tracking-tight text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white'
+  'border-b-2 border-transparent pb-1 font-[Inter] font-bold uppercase tracking-tight text-gray-400 transition-colors hover:text-white'
 
 /** True if `to` is a same-page anchor like "/#bio". */
 function isAnchor(to) {
@@ -101,10 +101,11 @@ useEffect(() => {
   return (
     <>
       {/* Top bar (always visible) */}
-      <nav className="sticky top-0 z-40 flex w-full shrink-0 items-center justify-between bg-white px-8 py-6 dark:bg-black">
+      <nav className="sticky top-0 z-40 flex w-full shrink-0 items-center justify-between bg-black px-8 py-6">
+
         <Link to={brand.homePath} className="flex items-center">
   <img
-    src="/WC_Shield.jpg"
+    src="/WCremovebg.png"
     alt="WC Xperience"
     className="h-10 w-auto"
   />
@@ -137,9 +138,9 @@ useEffect(() => {
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="material-symbols-outlined text-3xl text-black dark:text-white">
-            {menuOpen ? 'close' : 'menu'}
-          </span>
+          <span className="material-symbols-outlined text-3xl text-white">
+  {menuOpen ? 'close' : 'menu'}
+</span>
         </button>
       </nav>
 
@@ -163,18 +164,18 @@ useEffect(() => {
 
         {/* White column that holds the mobile links; slides horizontally with CSS transition-transform */}
         <aside
-          className={`absolute top-0 right-0 flex h-full w-full max-w-sm flex-col bg-white shadow-xl transition-transform duration-300 ease-out dark:bg-black ${
-            menuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
+  className={`absolute top-0 right-0 flex h-full w-full max-w-sm flex-col bg-black shadow-xl transition-transform duration-300 ease-out ${
+    menuOpen ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
           {/* Top row: X button (same as closing — some users look for an explicit close control) */}
-          <div className="flex justify-end border-b border-gray-200 px-6 py-5 dark:border-gray-800">
-            <button type="button" aria-label="Close menu" onClick={closeMenu}>
-              <span className="material-symbols-outlined text-3xl text-black dark:text-white">
-                close
-              </span>
-            </button>
-          </div>
+          <div className="flex justify-end border-b border-gray-800 px-6 py-5">
+  <button type="button" aria-label="Close menu" onClick={closeMenu}>
+    <span className="material-symbols-outlined text-3xl text-white">
+      close
+    </span>
+  </button>
+</div>
 
           {/* Same navLinks array as desktop — .map() renders one Link per item */}
           <div className="flex flex-col gap-1 px-6 pt-4 pb-8">
@@ -182,8 +183,7 @@ useEffect(() => {
               <Link
                 key={item.label}
                 to={item.to}
-                className="border-b border-gray-100 py-4 text-lg font-bold uppercase tracking-tight text-gray-600 dark:border-gray-900 dark:text-gray-300"
-                onClick={(e) => handleNavClick(e, item.to)}
+                className="border-b border-gray-900 py-4 text-lg font-bold uppercase tracking-tight text-gray-300"                onClick={(e) => handleNavClick(e, item.to)}
               >
                 {item.label}
               </Link>
