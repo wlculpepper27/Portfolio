@@ -64,13 +64,13 @@ const skills = [
 const SLIDE_STEP_REM = 9
 
 const skillCardClass =
-  'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-gray-900 transition-colors duration-300 hover:bg-accent md:h-40 md:w-40'
+  'group flex h-32 w-32 flex-none flex-col items-center justify-center bg-gray-900 transition-colors duration-300 hover:bg-accent active:bg-accent md:h-40 md:w-40'
 
 const skillIconClass =
-  'mb-2 text-4xl text-white transition-colors group-hover:text-white'
+  'mb-2 text-4xl text-white transition-colors group-hover:text-white group-active:text-white'
 
 const skillLabelClass =
-  'font-label text-[10px] tracking-widest text-white transition-colors group-hover:text-white'
+  'font-label text-[10px] tracking-widest text-white transition-colors group-hover:text-white group-active:text-white'
 
 function SkillsCarouselMobile({ items }) {
   const [index, setIndex] = useState(0)

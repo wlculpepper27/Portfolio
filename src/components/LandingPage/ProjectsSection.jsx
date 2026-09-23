@@ -41,14 +41,14 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="bg-black py-32 text-white">
       <MainLayoutContainer>
-        <div className="mb-24 flex items-baseline justify-between">
-          <h2 className="text-5xl font-black uppercase tracking-tighter">
-            {sectionTitle}
-          </h2>
-          <span className="font-label text-xs uppercase tracking-widest text-accent">
-  {sectionSubtitle}
-</span>
-        </div>
+        <div className="mb-24 flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between md:gap-0">
+  <h2 className="text-5xl font-black uppercase tracking-tighter">
+    {sectionTitle}
+  </h2>
+  <span className="font-label text-xs uppercase tracking-widest text-accent">
+    {sectionSubtitle}
+  </span>
+</div>
 
         {loading ? (
           <p className="text-gray-400">Loading projects…</p>
