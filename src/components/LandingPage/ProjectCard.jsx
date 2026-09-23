@@ -33,7 +33,7 @@ export default function ProjectCard({ project }) {
         )}
         {project?.badge ? (
           <div className="absolute top-4 right-4">
-            <span className="bg-white px-3 py-1 font-label text-[10px] tracking-widest text-black">
+            <span className="bg-accent px-3 py-1 font-label text-[10px] tracking-widest text-white">
               {project.badge}
             </span>
           </div>
