@@ -1,3 +1,9 @@
+@theme {
+  --color-accent: #6b399e;
+  --color-accent-hover: #8753c7;
+  --color-accent-muted: #4a2768;
+}
+
 @import 'tailwindcss';
 
 /* Class-based dark mode (matches mockup: html.dark / .dark ancestors) */
